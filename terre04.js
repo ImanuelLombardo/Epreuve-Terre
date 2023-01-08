@@ -11,6 +11,5 @@ if(arg[2] % 2 === 0){
 } else if(arg[2] % 2 === 1 || arg[2] % 2 === -1) {
   console.log("Impair");
 } else {
-  console.log(arg[2] % 2);
   console.log("Tu ne me la mettras pas à l\’envers.");
 };
