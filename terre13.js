@@ -21,6 +21,11 @@ const num2 = parseInt(args[3]);
 const num3 = parseInt(args[4]);
 const numbers = [num1, num2, num3];
 
+///////////////////////////////////////////////
+////////////
+// Function
+////////////
+
 // Connaitre le nbr d'argument (chiffre)
 function nbrArgs(arr){
   let count = 0;
@@ -31,10 +36,13 @@ function nbrArgs(arr){
 
   return count - 2;
 };
+///////////////////////////////////////////////
 
 // Controle si 3 chiffre passer en argument
 if(nbrArgs(args) !== 3) {
   console.log("Vous n'avez pas mis le bon nombre de chiffre, vous devez en mettre 3");
+} else if(num1 === num2 || num2 === num3 || num1 === num3){
+  console.log("Erreur, Vous ne pouvez pas mettre 2 fois le même chiffre")
 } else {
   // Mettre dans l'ordre croissant
   let temp = 0;
