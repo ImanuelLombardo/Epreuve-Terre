@@ -10,14 +10,24 @@ process.argv.forEach((val, index) => {
 
 // Inverser les charactères
 let inline = "";
-if(argStr.length < 3){
-  console.log("Doesn't have argument");
+if(length(argStr) < 3){
 } else {
-  for(let i = 2; i < argStr.length; i++) {
-    for(let y = argStr[i].length - 1; y >= 0; y--) {
+  for(let i = 2; i < length(argStr); i++) {
+    for(let y = length(argStr[i]) - 1; y >= 0; y--) {
       inline += argStr[i][y] + "";
     };
     inline += " ";
   }
 };
 console.log(inline);
+
+// Fonction
+function length(arr) {
+  let count = 0;
+
+  do{
+    count++;
+  } while(arr[count] !== undefined);
+
+  return count;
+};
